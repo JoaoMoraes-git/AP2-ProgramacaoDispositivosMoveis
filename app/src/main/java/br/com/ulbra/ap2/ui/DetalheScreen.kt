@@ -14,6 +14,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
@@ -36,9 +37,16 @@ fun DetalheScreen(
                 title = { Text(jogo.titulo) },
                 navigationIcon = {
                     TextButton(onClick = onVoltar) {
-                        Text("← Voltar")
+                        Text(
+                            text = "← Voltar",
+                            color = MaterialTheme.colorScheme.onPrimary
+                        )
                     }
-                }
+                },
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    titleContentColor = MaterialTheme.colorScheme.onPrimary
+                )
             )
         }
     ) { innerPadding ->
@@ -67,7 +75,8 @@ fun DetalheScreen(
 
             Text(
                 text = "Gênero: ${jogo.genero}",
-                style = MaterialTheme.typography.titleMedium
+                style = MaterialTheme.typography.titleMedium,
+                color = MaterialTheme.colorScheme.secondary
             )
 
             Text(
@@ -77,7 +86,8 @@ fun DetalheScreen(
 
             Text(
                 text = "Nota: ${jogo.nota}/10",
-                style = MaterialTheme.typography.bodyLarge
+                style = MaterialTheme.typography.bodyLarge,
+                color = MaterialTheme.colorScheme.tertiary
             )
 
             Text(
