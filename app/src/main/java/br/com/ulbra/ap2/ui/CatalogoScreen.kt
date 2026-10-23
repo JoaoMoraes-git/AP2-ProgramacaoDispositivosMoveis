@@ -27,10 +27,10 @@ fun CatalogoScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("GameDex") },
+                title = { Text("MyGameLib") },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primary,
-                    titleContentColor = MaterialTheme.colorScheme.onPrimary
+                    titleContentColor = MaterialTheme.colorScheme.tertiary
                 )
             )
         }
@@ -40,7 +40,7 @@ fun CatalogoScreen(
                 .fillMaxSize()
                 .padding(innerPadding),
             contentPadding = PaddingValues(16.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+            verticalArrangement = Arrangement.spacedBy(20.dp)
         ) {
             items(
                 items = jogos,

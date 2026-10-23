@@ -38,14 +38,14 @@ fun DetalheScreen(
                 navigationIcon = {
                     TextButton(onClick = onVoltar) {
                         Text(
-                            text = "← Voltar",
-                            color = MaterialTheme.colorScheme.onPrimary
+                            text = "Voltar",
+                            color = MaterialTheme.colorScheme.tertiary
                         )
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primary,
-                    titleContentColor = MaterialTheme.colorScheme.onPrimary
+                    titleContentColor = MaterialTheme.colorScheme.tertiary
                 )
             )
         }
@@ -70,35 +70,39 @@ fun DetalheScreen(
             Text(
                 text = jogo.titulo,
                 style = MaterialTheme.typography.headlineMedium,
-                fontWeight = FontWeight.Bold
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.secondary
             )
 
             Text(
                 text = "Gênero: ${jogo.genero}",
                 style = MaterialTheme.typography.titleMedium,
-                color = MaterialTheme.colorScheme.secondary
+                color = MaterialTheme.colorScheme.primary
             )
 
             Text(
                 text = "Ano de lançamento: ${jogo.ano}",
-                style = MaterialTheme.typography.bodyLarge
+                style = MaterialTheme.typography.bodyLarge,
+                color = MaterialTheme.colorScheme.primary
             )
 
             Text(
                 text = "Nota: ${jogo.nota}/10",
                 style = MaterialTheme.typography.bodyLarge,
-                color = MaterialTheme.colorScheme.tertiary
+                color = MaterialTheme.colorScheme.primary
             )
 
             Text(
                 text = "Descrição",
                 style = MaterialTheme.typography.titleLarge,
-                fontWeight = FontWeight.Bold
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.secondary
             )
 
             Text(
                 text = jogo.descricao,
-                style = MaterialTheme.typography.bodyLarge
+                style = MaterialTheme.typography.bodyLarge,
+                color = MaterialTheme.colorScheme.primary
             )
         }
     }

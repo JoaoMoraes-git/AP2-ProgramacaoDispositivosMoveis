@@ -35,7 +35,7 @@ fun JogoCard(
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
     ) {
         Column(
-            modifier = Modifier.padding(12.dp),
+            modifier = Modifier.padding(10.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             AsyncImage(
@@ -51,20 +51,20 @@ fun JogoCard(
                 text = jogo.titulo,
                 style = MaterialTheme.typography.titleLarge,
                 fontWeight = FontWeight.Bold,
-                color = MaterialTheme.colorScheme.onSecondary
+                color = MaterialTheme.colorScheme.tertiary
             )
 
             Text(
                 text = "Gênero: ${jogo.genero}",
                 style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSecondary
+                color = MaterialTheme.colorScheme.tertiary
             )
 
             Text(
                 text = "Lançamento: ${jogo.ano}  |  Nota: ${jogo.nota}/10",
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.SemiBold,
-                color = MaterialTheme.colorScheme.onSecondary
+                color = MaterialTheme.colorScheme.tertiary
             )
         }
     }
